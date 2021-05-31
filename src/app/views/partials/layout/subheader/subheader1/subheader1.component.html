@@ -1,0 +1,31 @@
+<!-- begin:: Content Head -->
+<div class="kt-subheader kt-grid__item" [ngClass]="{'kt-container--clear': clear}" [hidden]="subheaderService.disabled$ | async" id="kt_subheader">
+	<div class="kt-container" [ngClass]="{'kt-container--fluid': fluid}">
+		<div class="kt-subheader__main">
+			<h3 *ngIf="title" class="kt-subheader__title ">{{title}} </h3>
+			<h3  class="kt-subheader__title text_title">{{text}} </h3>
+			
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb "  *ngIf="url=='/panel/dashboard'">
+  <li class="breadcrumb-item" routerLink="/panel/dashboard"><a href="javascript:void(0)"><i class="kt-menu__link-icon flaticon2-architecture-and-city ng-star-inserted"></i> Dashboard</a></li>
+  </ol>
+
+  <ol class="breadcrumb "  *ngIf="url=='/panel/admins'">
+ <li class="breadcrumb-item" ><a href="javascript:void(0)"  routerLink="/panel/dashboard"><i class="kt-menu__link-icon flaticon2-architecture-and-city ng-star-inserted"></i> Dashboard</a></li><li class="breadcrumb-item active {{title}}" aria-current="page">All Admins</li>
+  </ol>
+  <ol class="breadcrumb "  *ngIf="url=='/panel/admins/admins-add'">
+ <li class="breadcrumb-item" ><a href="javascript:void(0)"  routerLink="/panel/dashboard"><i class="kt-menu__link-icon flaticon2-architecture-and-city ng-star-inserted"></i> Dashboard</a></li><li class="breadcrumb-item " aria-current="page"><a href="javascript:void(0)" routerLink="/panel/admins" >All  Admins</a></li><li class="breadcrumb-item active {{title}}" aria-current="page">Add Admin</li>
+  </ol>
+  <ol class="breadcrumb "  *ngIf="check_string('admins-edit') == 0 ">
+ <li class="breadcrumb-item" ><a href="javascript:void(0)"  routerLink="/panel/dashboard"><i class="kt-menu__link-icon flaticon2-architecture-and-city ng-star-inserted"></i> Dashboard</a></li><li class="breadcrumb-item " aria-current="page"><a href="javascript:void(0)" routerLink="/panel/admins" >All  Admins</a></li><li class="breadcrumb-item active {{title}}" aria-current="page">Edit Admin</li>
+  </ol>
+  <ol class="breadcrumb "  *ngIf="check_string('admins-view') == 0 ">
+ <li class="breadcrumb-item" ><a href="javascript:void(0)"  routerLink="/panel/dashboard"><i class="kt-menu__link-icon flaticon2-architecture-and-city ng-star-inserted"></i> Dashboard</a></li><li class="breadcrumb-item " aria-current="page"><a href="javascript:void(0)" routerLink="/panel/admins" >All  Admins</a></li><li class="breadcrumb-item active {{title}}" aria-current="page">View Admin</li>
+  </ol>
+  
+</nav>
+				
+			</div>
+		</div>
+	</div>
+<!-- end:: Content Head -->

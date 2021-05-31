@@ -1,0 +1,110 @@
+p
+{    font-size: 14px;
+}
+.product-side
+{
+.card-title
+{
+      color: #123f7a;
+    font-size: 16px;
+	margin-bottom:10px;
+}[price] {
+    color: #f7a61f;
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+}
+}
+[panel]
+{
+[heading]
+{
+    color: #48465b;
+    font-size: 1.2rem;
+	text-transform: capitalize;
+    border-bottom: 1px solid #eaeaea; 
+	position:relative;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	&:after
+	{
+	    content: "";
+		position: absolute;
+		width: 40px;
+		height: 3px;
+		background: #f7a61f;
+		left: 0;
+		bottom: -1px;
+	}
+}
+[card]
+{
+  img
+  {
+  max-width:100%;
+      min-height: 115px;
+    max-height: 115px;
+	    border-radius: 4px;
+  }
+}
+}
+.name-tlsa {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+ li {
+    display: inline-block;
+    font-size: var(--ion-font-size-14);
+    flex: 1;
+
+}
+
+}
+.floor-imga 
+{
+img {
+    max-width: 50%;
+    margin: 0 auto;
+}
+}
+ul.list-al-sa {
+    padding: 0px;
+    margin: 0px;
+    list-style: armenian;
+    border: 1px solid #f3f3f3;
+    background: #f9f9f9;
+	 li {
+		display: block;
+		padding: 10px;
+		border-bottom: 1px solid #efefef;
+		color: #848484;
+	}
+}
+.ngs{
+    background: #f9f9f9;
+    padding: 20px;
+.img-boxa img 
+{ width:100%;
+}
+}
+
+
+[pos] , [check]
+{
+ flex: 0 0 7% ;
+  width: 7% ;
+}
+[title]
+{
+ flex: 0 0 17%;
+  width: 17% ;
+}mat-cell
+{
+ overflow: initial;
+}
+
+table {
+  width: 100%;
+}

@@ -1,0 +1,62 @@
+<div class="kt-portlet">
+		<div class="kt-portlet__head">
+	     <div class="kt-portlet__head-label">
+		    <h3 class="kt-portlet__head-title"><span>Admin Details</span></h3>
+		 </div>
+		  <div class="kt-portlet__head-toolbar" >
+		  <button routerLink="/panel/admins/"  mat-raised-button color="yellow">Back To Admins</button>
+		 </div>
+	</div>
+		<div class="kt-portlet__body">
+ <mat-tab-group [(selectedIndex)]="selectedTab"  (selectedTabChange)="yourFn($event)">
+ <!------ Profile Start---------------->	
+	<mat-tab>
+		<ng-template mat-tab-label>
+			<i class="mat-tab-label-icon fa fa-user"></i>
+			Basic Information
+		</ng-template>
+		<ng-template matTabContent>
+			<div class="row">
+			<div class="col-md-4 product-side">	
+			<div class="card " >
+			<img *ngIf="errors.indexOf(post?.image) >= 0" src="assets/img/default.png" class="card-img-top" >
+			<img *ngIf="errors.indexOf(post?.image) == -1"  class="card-img-top"  src="{{IMAGES_URL+'/profile/'+post?.image}}"/> 
+			</div>
+			</div>
+			<div class="col-md-8">
+			<div panel>
+			<div panel-body>
+			<ul class="list-al-sa">
+			<li><b> Admin Name : </b> {{post?.name}} </li>
+			<li><b> Admin Email : </b> {{post?.email}} </li>
+			<li><b> Admin Type : </b> {{(post?.user_type=='2')?'Admin':'Front Desk'}} </li>
+			<li><b> Admin Phone : </b> {{post?.phone}} </li>
+			</ul>
+			</div>
+			</div>
+			</div>
+			</div> 
+		</ng-template>
+	</mat-tab>
+<!------ Profile End---------------->
+<!------ Wallet Start---------------->
+	<!-- <mat-tab  >
+		<ng-template mat-tab-label>
+		<i class="mat-tab-label-icon fa fa-credit-card	
+		"></i>
+		Other Information
+		</ng-template>
+		<ng-template matTabContent>
+			<div class="kt-change-password">
+     
+				
+ 
+
+			</div>
+		</ng-template>
+	</mat-tab> -->
+<!------ Wallet End---------------->
+
+
+  </mat-tab-group>
+</div> 
